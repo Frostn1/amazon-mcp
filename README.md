@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/@frostn1/amazon-mcp"><img src="https://img.shields.io/npm/v/@frostn1/amazon-mcp?color=f07c14&label=npm" alt="npm"></a>
+  <a href="https://www.npmjs.com/package/@frostn/amazon-mcp"><img src="https://img.shields.io/npm/v/@frostn/amazon-mcp?color=f07c14&label=npm" alt="npm"></a>
   <a href="https://github.com/Frostn1/amazon-mcp/actions/workflows/test.yml"><img src="https://img.shields.io/github/actions/workflow/status/Frostn1/amazon-mcp/test.yml?label=tests" alt="tests"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT"></a>
   <a href="https://modelcontextprotocol.io"><img src="https://img.shields.io/badge/MCP-server-2b2f3a" alt="MCP server"></a>
@@ -60,7 +60,7 @@ You need [Bun](https://bun.sh) (`curl -fsSL https://bun.sh/install | bash`).
 **Claude Code**
 
 ```bash
-claude mcp add -s user amazon -- bunx @frostn1/amazon-mcp
+claude mcp add -s user amazon -- bunx @frostn/amazon-mcp
 ```
 
 **Claude Desktop** (Settings → Developer → Edit Config), **Cursor** (`~/.cursor/mcp.json`) and most other apps:
@@ -70,7 +70,7 @@ claude mcp add -s user amazon -- bunx @frostn1/amazon-mcp
   "mcpServers": {
     "amazon": {
       "command": "bunx",
-      "args": ["@frostn1/amazon-mcp"]
+      "args": ["@frostn/amazon-mcp"]
     }
   }
 }
@@ -81,7 +81,7 @@ If the app can't find `bunx`, use its full path: `~/.bun/bin/bunx`, written out 
 **Sign in once.** Ask your agent to "sign me in to Amazon", or run:
 
 ```bash
-bunx @frostn1/amazon-mcp signin
+bunx @frostn/amazon-mcp signin
 ```
 
 A browser window opens on Amazon's real sign-in page and you sign in there. The agent never sees your password. Before the first sign-in, install the browser it uses:
@@ -99,7 +99,7 @@ Claude on the phone can't start programs on your computer, so the computer runs 
 1. On your computer, install [cloudflared](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/downloads/) (`brew install cloudflared`), then run:
 
    ```bash
-   bunx @frostn1/amazon-mcp serve
+   bunx @frostn/amazon-mcp serve
    ```
 
 2. It prints a URL like `https://something.trycloudflare.com/mcp/3f9c…`.
@@ -116,7 +116,7 @@ Good to know:
   ```
 
   ```bash
-  bunx @frostn1/amazon-mcp serve --public-url https://your-mac.your-tailnet.ts.net
+  bunx @frostn/amazon-mcp serve --public-url https://your-mac.your-tailnet.ts.net
   ```
 
   A named Cloudflare tunnel or your own server works the same way. `--port` picks the local port (default 8765), and `--local` skips the tunnel.
@@ -152,15 +152,15 @@ You can always cancel in Amazon → Your Orders. Everything else (search, cart, 
 Every tool has a command too:
 
 ```bash
-bunx @frostn1/amazon-mcp search fountain pen --max 30
+bunx @frostn/amazon-mcp search fountain pen --max 30
 ```
 
 ```bash
-bunx @frostn1/amazon-mcp cart view
+bunx @frostn/amazon-mcp cart view
 ```
 
 ```bash
-bunx @frostn1/amazon-mcp help
+bunx @frostn/amazon-mcp help
 ```
 
 Add `--json` for raw data.
